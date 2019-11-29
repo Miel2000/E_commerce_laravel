@@ -156,7 +156,7 @@ class CartTest extends TestCase
       $response->assertSuccessful()
         ->assertViewHas('productsWithQuantities', function ($productsWithQuantities)
         {
-            // je veux qu'il y ait qu'un seul produit dans le panier
+            // je veux que mon panier soit vide
             return $productsWithQuantities->isEmpty();
         });
    }
@@ -177,7 +177,7 @@ class CartTest extends TestCase
         $response->assertSuccessful()
                  ->assertViewHas('productsWithQuantities', function ($productsWithQuantities)
         {
-        // je veux qu'il y ait qu'un seul produit dans le panier
+     
         return $productsWithQuantities->isEmpty();
         });
    }
